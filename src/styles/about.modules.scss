@@ -1,0 +1,104 @@
+@use 'mediaQueries.modules.scss';
+$button: #007bff;
+$offwhite: #f8f9fa;
+$green: #4cb034;
+
+
+.page-indicator{
+    margin-bottom: 0;
+}
+.organogram-container{
+    display: flex;
+    padding: 50px 15px;
+    padding-bottom: 0;
+    justify-content: center;
+    width: auto;
+    img{
+        @include mediaQueries.for-phone-only{
+            width: 100%;
+        }
+    }
+}
+
+
+
+.header-list{
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    background-image: url('../img/dl.beatsnoop.com-high-62635505855f1ec1d7.jpg');
+    padding: 100px 50px;
+    width: calc(100% - 100px);
+    height: fit-content;
+    @include mediaQueries.for-phone-only{
+        width: calc(100% - 30px);
+        padding: 50px 15px;
+        // padding-bottom: 0;
+    }
+    h1{
+        text-align: center;
+        text-decoration: underline;
+        font-size: xx-large;
+        text-transform: uppercase;
+        margin-top: 50px;
+        &:first-of-type{
+            margin-top: 0;
+        }
+        @include mediaQueries.for-tablet-landscape-up{
+            font-size: larger;
+            &:first-of-type{
+                margin-top: 0;
+            }
+        }
+        @include mediaQueries.for-phone-only{
+            font-weight: 600px;
+            &:first-of-type{
+                margin-top: 0;
+            }
+        }
+    }
+    h2{
+        text-transform: uppercase;
+        text-decoration: underline;
+        font-size: large;
+        color: $button;
+    }
+    p{
+        margin: 0 auto;
+        text-transform: lowercase;
+        text-align: center;
+        font-size: large;
+        line-height: 2;
+        width: 800px;
+        @include mediaQueries.for-phone-only{
+            width: 100%;
+            font-size: medium;
+        }
+    }
+    ul{
+        line-height: 3;
+        // display: inherit;
+        // flex-direction: inherit;
+        // align-items: inherit;
+        list-style-type: disc;
+        font-size: large;
+        @include mediaQueries.for-phone-only{
+            line-height: 2;
+            font-size: medium;
+        }
+    }
+    &.tools{
+        div{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            height: auto;
+            @include mediaQueries.for-tablet-landscape-up{
+                justify-content: flex-start;
+            }
+            ul{
+                height: fit-content;
+            }
+        }
+    }
+}

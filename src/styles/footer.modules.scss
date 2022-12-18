@@ -1,0 +1,154 @@
+$button: #007bff;
+$offwhite: #f8f9fa;
+$green: #4cb034;
+@use 'mediaQueries.modules.scss';
+
+
+
+.first-footer{
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 50px;
+    width: calc(100% - 100px);
+    padding-bottom: 50px;
+    margin-top: 100px;
+    background-color: #343a40;
+    @include mediaQueries.for-phone-only{
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: auto;
+        padding: 50px 15px;
+        width: calc(100% - 30px);
+        margin-top: 50px;
+    }
+    .second-footer{
+        height: 90%;
+        width: 22%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        @include mediaQueries.for-tablet-landscape-up{
+            width: 20%;
+        }
+        @include mediaQueries.for-phone-only{
+            width: 100%;
+        }
+        p{
+            font-size: small;
+            color: #545c63;
+            a{
+                color: $green;
+            }
+        }
+    }
+    div{
+        width: 22%;
+        // border: 1px solid black;
+        height: 90%;
+        @include mediaQueries.for-tablet-landscape-up{
+            width: 20%;
+        }
+        @include mediaQueries.for-phone-only{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        &:nth-of-type(2){
+            @include mediaQueries.for-phone-only{
+                height: 250px;
+            }
+            ul{
+                display: flex;
+                padding-left: 0;
+                height: 100%;
+                flex-direction: column;
+                justify-content: space-between;
+                @include mediaQueries.for-phone-only{
+                    width: 80%;
+                }
+                label{
+                    color: #545c63;
+                    font-size: medium;
+                    small{
+                        color: white;
+                        font-size: medium;
+                    }
+                    a{
+                        color: $green;
+                        font-size: large;
+                    }
+                }
+            }
+        }
+        &:nth-of-type(3){
+            @include mediaQueries.for-phone-only{
+                height: 200px;
+                margin-top: 40px;
+            }
+            ul{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 50%;
+                padding-left: 0;
+                label{
+                    color: #545c63;
+                }
+                small{
+                    a{
+                        color: $green;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        &:nth-of-type(4){
+            ul{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 70%;
+                padding-left: 0;
+                label{
+                    color: #545c63;
+                }
+                .icon-container{
+                    width: 100%;
+                    display: flex;
+                    margin-top: 20px;
+                    button{
+                        background-color: transparent;
+                        border: 1px solid white;
+                        width: 30px;
+                        height: 30px;
+                        margin-right: 10px;
+                        border-radius: 200px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: 0.3s;
+                        a{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: $button;
+                            font-size: large;
+                            transition: 0.3s;
+                        }
+                        &:hover{
+                            background-color: $button;
+                            cursor: pointer;
+                            transition: 0.3s;
+                            border: 1px solid $button;
+                            a{
+                                transition: 0.3s;
+                                color: white;
+
+                            }
+                        }
+                    }
+                } 
+            }
+        }
+    }
+}

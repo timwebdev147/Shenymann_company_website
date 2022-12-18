@@ -1,0 +1,36 @@
+
+@use 'mediaQueries.modules.scss';
+
+.header-list{
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    padding: 50px 50px;
+    width: calc(100% - 100px);
+    @include mediaQueries.for-phone-only{
+        width: calc(100% - 30px);
+        padding: 50px 15px;
+        padding-bottom: 0;
+    }
+    h1{
+        color: #4cb034;
+        text-align: center;
+        text-decoration: underline;
+        font-size: xx-large;
+        text-transform: uppercase;
+        @include mediaQueries.for-tablet-landscape-up{
+            font-size: larger;
+        }
+        @include mediaQueries.for-phone-only{
+            font-weight: 600px;
+        }
+    }
+    ul{
+        line-height: 3;
+        // display: inherit;
+        // flex-direction: inherit;
+        // align-items: inherit;
+        list-style-type: disc;
+        font-size: large;
+    }
+}
